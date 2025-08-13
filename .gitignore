@@ -1,0 +1,34 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Data files
+*.csv
+*.json
+
+# Chroma index or other generated indexes
+chroma_index/
+
+# Scraped or generated text data
+scrappedText/
+
+# Logs
+*.log
