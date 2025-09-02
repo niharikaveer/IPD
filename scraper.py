@@ -27,7 +27,7 @@ headers = {
     'Host': 'indiankanoon.org'
 }
 start_page = 0
-end_page = 50
+end_page = 5
 
 
 def get_decoded_html(response):
@@ -167,6 +167,7 @@ if __name__ == "__main__":
                 target_url = f"https://indiankanoon.org/doc/{doc_id}/"
                 print(f"Processing URL: {target_url}")
                 html_to_text(target_url)
-            time.sleep(2)
+                time.sleep(2)
+            time.sleep(20)
         else:
             print(f"No document IDs found on page {page_num}.")

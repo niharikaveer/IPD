@@ -11,7 +11,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure Gemini
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+# genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key="")
 
 # Input & output paths
 INPUT_DIR = "scrappedText"
@@ -24,13 +25,13 @@ columns = [
     "Decision Summary", "Outcome", "Citations"
 ]
 
-def chunk_text(text, chunk_size=3500):
+def chunk_text(text, chunk_size=50000):
     """Split text into smaller chunks."""
     return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
 
 def call_gemini(prompt, retries=3):
     """Call Gemini API with retries."""
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash-lite")
     for attempt in range(retries):
         try:
             response = model.generate_content(prompt)

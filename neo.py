@@ -4,7 +4,7 @@ from neo4j import GraphDatabase
 # ⚡ Step 1: Local Neo4j connection details
 URI = "neo4j://127.0.0.1:7687"   # default local connection
 USER = "neo4j"                  # your DB username
-PASSWORD = "test1234"           # the password you set during setup
+PASSWORD = "12345678"           # the password you set during setup
 
 driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
 
