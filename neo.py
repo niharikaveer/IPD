@@ -1,12 +1,13 @@
 import csv
+
 from neo4j import GraphDatabase
 
-# ⚡ Step 1: Local Neo4j connection details
-URI = "neo4j://127.0.0.1:7687"   # default local connection
-USER = "neo4j"                  # your DB username
-PASSWORD = "12345678"           # the password you set during setup
+uri = "neo4j://127.0.0.1:7687"
+user = "neo4j"
+password = "test1234"
 
-driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
+driver = GraphDatabase.driver(uri, auth=(user, password))
+
 
 # ⚡ Step 2: Load cases into Neo4j from CSV
 def load_cases_into_neo4j(csv_file):

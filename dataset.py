@@ -12,7 +12,7 @@ load_dotenv()
 
 # Configure Gemini
 # genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyA1yfuI53gUSmbZMs-Cof3smknLVPDiSog")
 
 # Input & output paths
 INPUT_DIR = "scrappedText"
